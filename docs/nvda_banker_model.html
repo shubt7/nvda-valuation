@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>NVIDIA Corporation (NVDA) banker model</title>
+<style>
+:root{--bg:#fff;--fg:#1d1d1f;--muted:#6e6e73;--card:#f5f5f7;--grid:#d9d9de;--accent:#0b3d91;--pos:#1a7f37;--neg:#c62828}
+@media (prefers-color-scheme: dark){:root{--bg:#111;--fg:#f2f2f2;--muted:#9a9aa0;--card:#1c1c1e;--grid:#333;--accent:#7fb2ff}}
+body{font:15px/1.55 system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--fg);margin:0;padding:32px}
+main{max-width:1040px;margin:0 auto}
+h1{font-size:28px;margin:0 0 4px}h2{font-size:18px;margin:28px 0 10px;color:var(--accent)}
+.sub{color:var(--muted);margin-bottom:20px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0}
+.kpi,.card{background:var(--card);border-radius:12px;padding:16px 18px}
+.kpi .v{font-size:24px;font-weight:600}.kpi .l{color:var(--muted);font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:right;padding:7px 9px;border-bottom:1px solid var(--grid)}
+th:first-child,td:first-child{text-align:left}th{color:var(--muted);font-weight:500}
+.note{color:var(--muted);font-size:13px;margin-top:8px}
+.takeaways li{margin-bottom:8px}
+.chart{width:100%;height:auto}.axis{fill:var(--muted);font-size:12px}.lbl{fill:var(--fg);font-size:13px}
+.grid{stroke:var(--grid)}.bar{fill:var(--accent);opacity:.85}.bar.ref{fill:var(--muted)}.now{stroke:var(--neg);stroke-dasharray:4 3;stroke-width:1.5}
+.pill{display:inline-block;padding:2px 9px;border-radius:999px;background:var(--card);border:1px solid var(--grid);font-size:12px;color:var(--muted)}
+.disclaimer{color:var(--muted);font-size:12px;margin-top:28px;border-top:1px solid var(--grid);padding-top:12px}
+</style></head><body><main>
+<h1>NVIDIA Corporation (NVDA): banker model</h1>
+<div class="sub">Internal detail · Shubham · all figures $m except per share</div>
+<h2>Assumptions</h2><div class="card"><table><tr><td>Revenue (last actual)</td><td>$215,938.00m</td></tr><tr><td>Revenue growth, Y1 → Y5</td><td>50.0% → 8.0%</td></tr><tr><td>EBIT margin</td><td>58.0%</td></tr><tr><td>Tax rate</td><td>16.0%</td></tr><tr><td>D&A / capex / NWC (% revenue)</td><td>1.3% / 2.8% / 10.0%</td></tr><tr><td>WACC</td><td>10.00%</td></tr><tr><td>Terminal growth</td><td>3.00%</td></tr><tr><td>Exit multiple (cross-check)</td><td>20.0x EBITDA</td></tr><tr><td>Net debt</td><td>$-54,088.00m</td></tr><tr><td>Diluted shares</td><td>24,514.0m</td></tr></table></div>
+<h2>Projections and unlevered free cash flow</h2><div class="card"><table><tr><th>$m</th><th>Y1</th><th>Y2</th><th>Y3</th><th>Y4</th><th>Y5</th></tr><tr><td>Revenue</td><td>323,907.0</td><td>421,079.1</td><td>505,294.9</td><td>565,930.3</td><td>611,204.7</td></tr><tr><td>EBITDA</td><td>192,130.6</td><td>249,769.7</td><td>299,723.7</td><td>335,690.5</td><td>362,545.8</td></tr><tr><td>EBIT</td><td>187,866.1</td><td>244,225.9</td><td>293,071.1</td><td>328,239.6</td><td>354,498.7</td></tr><tr><td>Unlevered FCF</td><td>142,212.1</td><td>189,194.5</td><td>230,272.4</td><td>261,273.8</td><td>284,196.9</td></tr></table></div>
+<h2>DCF bridge</h2><div class="card"><table><tr><th>Bridge ($m)</th><th>Value</th></tr><tr><td>PV of unlevered FCF</td><td>813,567.3</td></tr><tr><td>PV of terminal value (perpetuity)</td><td>2,596,540.0</td></tr><tr><td><b>Enterprise value</b></td><td><b>3,410,107.3</b></td></tr><tr><td>Less: net debt</td><td>(-54,088.0)</td></tr><tr><td><b>Equity value</b></td><td><b>3,464,195.3</b></td></tr><tr><td>Value per share</td><td>$141.31</td></tr><tr><td>Exit-multiple cross-check, per share</td><td>$219.05</td></tr><tr><td>Terminal value share of EV</td><td>76%</td></tr></table></div>
+<h2>Sensitivity: value per share, WACC × terminal growth</h2>
+<div class="card"><table><tr><th></th><th>g 2.5%</th><th>g 3.0%</th><th>g 3.5%</th><th>g 4.0%</th></tr><tr><td>WACC 8.5%</td><td style="background:color-mix(in srgb, #0b3d91 43%, var(--card))">$168.58</td><td style="background:color-mix(in srgb, #0b3d91 50%, var(--card))">$181.25</td><td style="background:color-mix(in srgb, #0b3d91 59%, var(--card))">$196.46</td><td style="background:color-mix(in srgb, #0b3d91 70%, var(--card))">$215.05</td></tr><tr><td>WACC 9.0%</td><td style="background:color-mix(in srgb, #0b3d91 36%, var(--card))">$155.18</td><td style="background:color-mix(in srgb, #0b3d91 42%, var(--card))">$165.71</td><td style="background:color-mix(in srgb, #0b3d91 49%, var(--card))">$178.15</td><td style="background:color-mix(in srgb, #0b3d91 57%, var(--card))">$193.09</td></tr><tr><td>WACC 9.5%</td><td style="background:color-mix(in srgb, #0b3d91 29%, var(--card))">$143.71</td><td style="background:color-mix(in srgb, #0b3d91 34%, var(--card))">$152.57</td><td style="background:color-mix(in srgb, #0b3d91 40%, var(--card))">$162.91</td><td style="background:color-mix(in srgb, #0b3d91 47%, var(--card))">$175.13</td></tr><tr><td>WACC 10.0%</td><td style="background:color-mix(in srgb, #0b3d91 24%, var(--card))">$133.77</td><td style="background:color-mix(in srgb, #0b3d91 28%, var(--card))">$141.31</td><td style="background:color-mix(in srgb, #0b3d91 33%, var(--card))">$150.02</td><td style="background:color-mix(in srgb, #0b3d91 39%, var(--card))">$160.17</td></tr><tr><td>WACC 10.5%</td><td style="background:color-mix(in srgb, #0b3d91 19%, var(--card))">$125.09</td><td style="background:color-mix(in srgb, #0b3d91 22%, var(--card))">$131.57</td><td style="background:color-mix(in srgb, #0b3d91 27%, var(--card))">$138.97</td><td style="background:color-mix(in srgb, #0b3d91 31%, var(--card))">$147.52</td></tr><tr><td>WACC 11.0%</td><td style="background:color-mix(in srgb, #0b3d91 15%, var(--card))">$117.43</td><td style="background:color-mix(in srgb, #0b3d91 18%, var(--card))">$123.05</td><td style="background:color-mix(in srgb, #0b3d91 21%, var(--card))">$129.41</td><td style="background:color-mix(in srgb, #0b3d91 25%, var(--card))">$136.68</td></tr></table>
+<div class="note">Darker cells are higher values. Cells with WACC ≤ g are undefined.</div></div>
+<h2>Football field (per share)</h2>
+<div class="card"><svg viewBox="0 0 900 198" class="chart" xmlns="http://www.w3.org/2000/svg">
+<line x1="230.0" x2="230.0" y1="20" y2="168" class="grid"/>
+<text x="230.0" y="186" class="axis" text-anchor="middle">$106</text>
+<line x1="358.0" x2="358.0" y1="20" y2="168" class="grid"/>
+<text x="358.0" y="186" class="axis" text-anchor="middle">$142</text>
+<line x1="486.0" x2="486.0" y1="20" y2="168" class="grid"/>
+<text x="486.0" y="186" class="axis" text-anchor="middle">$178</text>
+<line x1="614.0" x2="614.0" y1="20" y2="168" class="grid"/>
+<text x="614.0" y="186" class="axis" text-anchor="middle">$214</text>
+<line x1="742.0" x2="742.0" y1="20" y2="168" class="grid"/>
+<text x="742.0" y="186" class="axis" text-anchor="middle">$250</text>
+<line x1="870.0" x2="870.0" y1="20" y2="168" class="grid"/>
+<text x="870.0" y="186" class="axis" text-anchor="middle">$286</text>
+<text x="218" y="48.0" class="lbl" text-anchor="end">DCF: perpetuity growth</text>
+<rect x="271.6" y="30" width="215.3" height="26" rx="4" class="bar"/>
+<text x="265.6" y="47.0" class="axis" text-anchor="end">$117</text>
+<text x="493.0" y="47.0" class="axis">$178</text>
+<text x="218" y="94.0" class="lbl" text-anchor="end">DCF: exit multiple</text>
+<rect x="469.2" y="76" width="325.6" height="26" rx="4" class="bar"/>
+<text x="463.2" y="93.0" class="axis" text-anchor="end">$173</text>
+<text x="800.8" y="93.0" class="axis">$265</text>
+<text x="218" y="140.0" class="lbl" text-anchor="end">52-week trading range</text>
+<rect x="437.7" y="122" width="280.5" height="26" rx="4" class="bar ref"/>
+<text x="431.7" y="139.0" class="axis" text-anchor="end">$164</text>
+<text x="724.2" y="139.0" class="axis">$243</text>
+<line x1="619.0" x2="619.0" y1="12" y2="168" class="now"/>
+<text x="619.0" y="8" class="axis" text-anchor="middle">Current $215.38</text>
+</svg></div>
+<div class="disclaimer">Internal working model on hypothetical inputs. Verify all inputs against filings and market data before any use.</div>
+</main></body></html>

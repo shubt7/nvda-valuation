@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>NVIDIA Corporation (NVDA) valuation summary</title>
+<style>
+:root{--bg:#fff;--fg:#1d1d1f;--muted:#6e6e73;--card:#f5f5f7;--grid:#d9d9de;--accent:#0b3d91;--pos:#1a7f37;--neg:#c62828}
+@media (prefers-color-scheme: dark){:root{--bg:#111;--fg:#f2f2f2;--muted:#9a9aa0;--card:#1c1c1e;--grid:#333;--accent:#7fb2ff}}
+body{font:15px/1.55 system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--fg);margin:0;padding:32px}
+main{max-width:1040px;margin:0 auto}
+h1{font-size:28px;margin:0 0 4px}h2{font-size:18px;margin:28px 0 10px;color:var(--accent)}
+.sub{color:var(--muted);margin-bottom:20px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0}
+.kpi,.card{background:var(--card);border-radius:12px;padding:16px 18px}
+.kpi .v{font-size:24px;font-weight:600}.kpi .l{color:var(--muted);font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:right;padding:7px 9px;border-bottom:1px solid var(--grid)}
+th:first-child,td:first-child{text-align:left}th{color:var(--muted);font-weight:500}
+.note{color:var(--muted);font-size:13px;margin-top:8px}
+.takeaways li{margin-bottom:8px}
+.chart{width:100%;height:auto}.axis{fill:var(--muted);font-size:12px}.lbl{fill:var(--fg);font-size:13px}
+.grid{stroke:var(--grid)}.bar{fill:var(--accent);opacity:.85}.bar.ref{fill:var(--muted)}.now{stroke:var(--neg);stroke-dasharray:4 3;stroke-width:1.5}
+.pill{display:inline-block;padding:2px 9px;border-radius:999px;background:var(--card);border:1px solid var(--grid);font-size:12px;color:var(--muted)}
+.disclaimer{color:var(--muted);font-size:12px;margin-top:28px;border-top:1px solid var(--grid);padding-top:12px}
+</style></head><body><main>
+<h1>NVIDIA Corporation (NVDA): valuation summary</h1>
+<div class="sub">Client view · prepared by Shubham · illustrative analysis</div>
+<div class="kpis">
+  <div class="kpi"><div class="v">$141.31</div><div class="l">Base-case value per share</div></div>
+  <div class="kpi"><div class="v">$215.38</div><div class="l">Current share price</div></div>
+  <div class="kpi"><div class="v">-34%</div><div class="l">Base case vs. current</div></div>
+</div>
+<h2>Valuation range by method</h2>
+<div class="card"><svg viewBox="0 0 900 198" class="chart" xmlns="http://www.w3.org/2000/svg">
+<line x1="230.0" x2="230.0" y1="20" y2="168" class="grid"/>
+<text x="230.0" y="186" class="axis" text-anchor="middle">$106</text>
+<line x1="358.0" x2="358.0" y1="20" y2="168" class="grid"/>
+<text x="358.0" y="186" class="axis" text-anchor="middle">$142</text>
+<line x1="486.0" x2="486.0" y1="20" y2="168" class="grid"/>
+<text x="486.0" y="186" class="axis" text-anchor="middle">$178</text>
+<line x1="614.0" x2="614.0" y1="20" y2="168" class="grid"/>
+<text x="614.0" y="186" class="axis" text-anchor="middle">$214</text>
+<line x1="742.0" x2="742.0" y1="20" y2="168" class="grid"/>
+<text x="742.0" y="186" class="axis" text-anchor="middle">$250</text>
+<line x1="870.0" x2="870.0" y1="20" y2="168" class="grid"/>
+<text x="870.0" y="186" class="axis" text-anchor="middle">$286</text>
+<text x="218" y="48.0" class="lbl" text-anchor="end">DCF: perpetuity growth</text>
+<rect x="271.6" y="30" width="215.3" height="26" rx="4" class="bar"/>
+<text x="265.6" y="47.0" class="axis" text-anchor="end">$117</text>
+<text x="493.0" y="47.0" class="axis">$178</text>
+<text x="218" y="94.0" class="lbl" text-anchor="end">DCF: exit multiple</text>
+<rect x="469.2" y="76" width="325.6" height="26" rx="4" class="bar"/>
+<text x="463.2" y="93.0" class="axis" text-anchor="end">$173</text>
+<text x="800.8" y="93.0" class="axis">$265</text>
+<text x="218" y="140.0" class="lbl" text-anchor="end">52-week trading range</text>
+<rect x="437.7" y="122" width="280.5" height="26" rx="4" class="bar ref"/>
+<text x="431.7" y="139.0" class="axis" text-anchor="end">$164</text>
+<text x="724.2" y="139.0" class="axis">$243</text>
+<line x1="619.0" x2="619.0" y1="12" y2="168" class="now"/>
+<text x="619.0" y="8" class="axis" text-anchor="middle">Current $215.38</text>
+</svg>
+<div class="note">Bars show per-share value. The dashed line is the current price. Ranges come from sensitivity bands, not point estimates.</div></div>
+<h2>Key takeaways</h2>
+<div class="card"><ul class="takeaways"><li>Our base-case intrinsic value is <b>$141.31 per share</b>, 34% below the current price of $215.38.</li><li>Across methods, the indicative value range is <b>$117.43 to $264.97</b> per share.</li><li>About 76% of the value sits in the long-term outlook, so results depend heavily on margin and growth assumptions.</li><li>The range reflects reasonable variation in discount rate, growth and exit assumptions, not a precise target.</li></ul></div>
+<div class="disclaimer">Illustrative analysis built on hypothetical inputs. Not investment advice, a fairness opinion, or a recommendation to buy or sell any security.</div>
+</main></body></html>
